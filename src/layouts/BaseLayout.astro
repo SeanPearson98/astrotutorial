@@ -12,7 +12,7 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class="body">
     <Header />
     <h1>{pageTitle}</h1>
     <slot />
@@ -22,3 +22,15 @@ const { pageTitle } = Astro.props;
     </script>
   </body>
 </html>
+
+<style>
+  
+  .body {
+    margin: 0.50em;
+    border: square 3px lightseagreen;
+    border-radius: .8em;
+    padding: .7em 3em;
+    font-size: 1.25em;
+    background-color: slategrey;
+  }
+</style>
