@@ -3,18 +3,14 @@ import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 const allPosts = await Astro.glob('./posts/*.md');
-const pageTitle = "My Astro Learning Blogs";
+const pageTitle = "Fire Emblem Heroes";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
      
         
-            <h1>Dokkan</h1>
-            <h2>Brek reinstalled it.</h2>
-          
-            <p>Drew thinks sometimes.</p>
-          
-            <p>Drew fell further into silver.</p>
+            <h1>Here is where i'll keep a record of the things i do in it.</h1>
+            
             <ul>
                 {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
             </ul>
